@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-09-30T06:36:23.313Z",
+  "config": {
+    "model": "sim",
+    "maxModelRounds": 64,
+    "maxToolCalls": 128,
+    "timeoutMs": 600000
+  },
+  "summaries": [
+    {
+      "variant": "full",
+      "label": "Full Harness",
+      "description": "Context Manager 与 Prompt Optimizer 同时启用",
+      "totalTasks": 1,
+      "passedTasks": 1,
+      "successRate": 1,
+      "avgModelRounds": 2,
+      "avgToolCalls": 1,
+      "avgToolErrors": 0,
+      "avgTotalTokens": 1669,
+      "avgLatencyMs": 15
+    }
+  ],
+  "results": [
+    {
+      "variant": "full",
+      "taskId": "T01",
+      "passed": true,
+      "metrics": {
+        "modelRounds": 2,
+        "toolCalls": 1,
+        "toolErrors": 0,
+        "promptTokens": 1537,
+        "completionTokens": 132,
+        "totalTokens": 1669,
+        "latencyMs": 15,
+        "status": "completed"
+      },
+      "checkResults": [
+        {
+          "check": {
+            "kind": "answer-contains",
+            "patterns": [
+              "factorial"
+            ]
+          },
+          "passed": true,
+          "detail": "answer matches all patterns"
+        },
+        {
+          "check": {
+            "kind": "answer-contains",
+            "patterns": [
+              "递归|recursive"
+            ]
+          },
+          "passed": true,
+          "detail": "answer matches all patterns"
+        },
+        {
+          "check": {
+            "kind": "answer-contains",
+            "patterns": [
+              "负数|negative"
+            ]
+          },
+          "passed": true,
+          "detail": "answer matches all patterns"
+        }
+      ]
+    }
+  ]
+}
